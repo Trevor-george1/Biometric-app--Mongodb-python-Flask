@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff List</title>
+    <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+        </style>
+    </style>
+</head>
+<body>
+    <h2>Staff List</h2>
+    <table>
+        <tr>
+            <th>Staff Number</th>
+            <th>Username</th>
+            <th>Registration Date</th>
+            <th>Status</th>
+            <th>Branch</th>
+            <th>Title</th>
+        </tr>
+        {% for staff in staff_members %}
+        <tr>
+            <td>{{ staff.staff_number }}</td>
+            <td>{{ staff.username }}</td>
+            <td>{{ staff.registration_date }}</td>
+            <td>{{ staff.status }}</td>
+            <td>{{ staff.branch }}</td>
+            <td>{{ staff.title }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
